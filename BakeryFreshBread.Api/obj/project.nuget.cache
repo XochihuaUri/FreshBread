@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "sEk5GJ6DxCPLPTRPhnDGpIzCuMvZM5VuGBCzLuNitWQ4zqA+VCFlYqpiQ7qGDm0UjyuM+UTbJVm9rN2GRkWbFg==",
+  "success": true,
+  "projectFilePath": "D:\\jala\\Back\\BakeryFreshBread.Api\\BakeryFreshBread.Api\\BakeryFreshBread.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Uriel\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Uriel\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Uriel\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\Uriel\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\Uriel\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\Uriel\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
