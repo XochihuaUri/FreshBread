@@ -1,3 +1,6 @@
+using DB;
+using Microsoft.EntityFrameworkCore;
+
 namespace BakeryFreshBread.Api
 {
     public class Program
@@ -12,8 +15,22 @@ namespace BakeryFreshBread.Api
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            //builder.Services.AddDbContext<BakeryFreshBreadContext>(options =>
+            //{
+            //    options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection"));
+            //});
+
+            builder.Services.AddDbContext<BakeryFreshBreadContext>(
+                 options => options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection")));
+
 
             var app = builder.Build();
+
+            //using(var scope = app.Services.CreateScope())
+            //{
+            //    var context = scope.ServiceProvider.GetRequiredService<BakeryFreshBreadContext>();
+            //    context.Database.Migrate();
+            //}
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())

@@ -1,8 +1,10 @@
-﻿namespace BakeryFreashBread.models.Interfaces
+﻿using BakeryFreashBread.models.Models;
+
+namespace BakeryFreashBread.models.Interfaces
 {
     public interface IBaker
     {
-        IOrder Order { get; }
+        Order Order { get; }
         public void ClearTheOrder();
         public double GetOrderPrice();
     }

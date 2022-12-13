@@ -1,0 +1,12 @@
+D:\jala\Back\BakeryFreshBread.Api\BakeryFreashBread.models\bin\Debug\net6.0\BakeryFreashBread.models.deps.json
+D:\jala\Back\BakeryFreshBread.Api\BakeryFreashBread.models\bin\Debug\net6.0\BakeryFreashBread.models.dll
+D:\jala\Back\BakeryFreshBread.Api\BakeryFreashBread.models\bin\Debug\net6.0\BakeryFreashBread.models.pdb
+D:\jala\Back\BakeryFreshBread.Api\BakeryFreashBread.models\obj\Debug\net6.0\BakeryFreashBread.models.csproj.AssemblyReference.cache
+D:\jala\Back\BakeryFreshBread.Api\BakeryFreashBread.models\obj\Debug\net6.0\BakeryFreashBread.models.GeneratedMSBuildEditorConfig.editorconfig
+D:\jala\Back\BakeryFreshBread.Api\BakeryFreashBread.models\obj\Debug\net6.0\BakeryFreashBread.models.AssemblyInfoInputs.cache
+D:\jala\Back\BakeryFreshBread.Api\BakeryFreashBread.models\obj\Debug\net6.0\BakeryFreashBread.models.AssemblyInfo.cs
+D:\jala\Back\BakeryFreshBread.Api\BakeryFreashBread.models\obj\Debug\net6.0\BakeryFreashBread.models.csproj.CoreCompileInputs.cache
+D:\jala\Back\BakeryFreshBread.Api\BakeryFreashBread.models\obj\Debug\net6.0\BakeryFreashBread.models.dll
+D:\jala\Back\BakeryFreshBread.Api\BakeryFreashBread.models\obj\Debug\net6.0\refint\BakeryFreashBread.models.dll
+D:\jala\Back\BakeryFreshBread.Api\BakeryFreashBread.models\obj\Debug\net6.0\BakeryFreashBread.models.pdb
+D:\jala\Back\BakeryFreshBread.Api\BakeryFreashBread.models\obj\Debug\net6.0\ref\BakeryFreashBread.models.dll

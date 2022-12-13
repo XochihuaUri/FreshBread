@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BakeryFreshBread.Api", "BakeryFreshBread.Api\BakeryFreshBread.Api.csproj", "{EA05ADEC-C6B9-422D-ADD1-042C65656F8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BakeryFreshBread.Api", "BakeryFreshBread.Api\BakeryFreshBread.Api.csproj", "{EA05ADEC-C6B9-422D-ADD1-042C65656F8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BakeryFreashBread.models", "BakeryFreashBread.models\BakeryFreashBread.models.csproj", "{2F1744D6-3351-41D2-A41A-ED89BC3F6B97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BakeryFreashBread.models", "BakeryFreashBread.models\BakeryFreashBread.models.csproj", "{2F1744D6-3351-41D2-A41A-ED89BC3F6B97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB", "DB\DB.csproj", "{844BA71D-33CF-4EA3-8385-1609CC6DCC4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{2F1744D6-3351-41D2-A41A-ED89BC3F6B97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F1744D6-3351-41D2-A41A-ED89BC3F6B97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F1744D6-3351-41D2-A41A-ED89BC3F6B97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{844BA71D-33CF-4EA3-8385-1609CC6DCC4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{844BA71D-33CF-4EA3-8385-1609CC6DCC4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{844BA71D-33CF-4EA3-8385-1609CC6DCC4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{844BA71D-33CF-4EA3-8385-1609CC6DCC4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

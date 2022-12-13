@@ -5,7 +5,7 @@ namespace BakeryFreashBread.models.Services
 {
     public class MainBaker : IBaker
     {
-        public IOrder Order { get; set; }
+        public Order Order { get; set; }
         public MainBaker()
         {
             Order = new Order();
