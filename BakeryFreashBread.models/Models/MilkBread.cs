@@ -27,11 +27,11 @@ namespace BakeryFreashBread.models.Models
         public double CookingTemperature { get; set; }
         public MilkBread()
         {
-            Price = 10;
-            Flour = 1000;
-            Water = 280;
-            Salt = 20;
-            Yeast = 20;
+            Price = 1.5;
+            Flour = 55;
+            Water = 25;
+            Salt = 1;
+            Yeast = 3;
             Sugar = 6;
             Egg = 10;
             Honey = 2;
@@ -42,6 +42,38 @@ namespace BakeryFreashBread.models.Models
             RestingTime = 0.2;
             FermentTime = 4;
             CookingTemperature = 180;
+        }
+
+        public void Prepare(int quantity = 1)
+        {
+            Console.WriteLine($"Mixing the {Flour * quantity} grs of flour, " +
+                             $"{Water * quantity} gr of water, " +
+                             $"{Yeast * quantity} gr of yeast, " +
+                             $"{Salt * quantity} gr of salt, " +
+                             $"{Sugar * quantity} gr of sugar, " +
+                             $"{Egg * quantity} gr of egg, " +
+                             $"{Butter * quantity} gr of butter, " +
+                             $"{Milk * quantity} gr of milk, " +
+                             $"{Honey * quantity} gr of honey," +
+                             $"{LemonZest * quantity} of lemon zest and " +
+                             $"{Vanilla * quantity} of vanilla");
+            Thread.Sleep(500);
+            if (quantity > 1)
+            {
+                Console.WriteLine("Cut the dough");
+                Thread.Sleep(500);
+            }
+
+            Console.WriteLine($"Let the dough rest {RestingTime} hrs");
+            Thread.Sleep(500);
+            Console.WriteLine("Shape the dough");
+            Thread.Sleep(500);
+            Console.WriteLine($"Let the dough rest {FermentTime} hrs");
+            Thread.Sleep(500);
+            Console.WriteLine($"Cook for {CookingTime} minutes at {CookingTemperature}º");
+            Thread.Sleep(1000);
+            Console.WriteLine("Bread order prepared");
+            Thread.Sleep(1000);
         }
     }
 }

@@ -11,6 +11,7 @@
         double RestingTime { get; set; }
         double FermentTime { get; set; }
         double CookingTemperature { get; set; }
+        public void Prepare(int quantity);
     }
 
 }

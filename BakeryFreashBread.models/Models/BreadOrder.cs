@@ -12,7 +12,7 @@ namespace BakeryFreashBread.models.Models
         public BreadOrder(int quantity, IBread bread)
         {
             Quantity = quantity;
-            OrderPrice = quantity*bread.Price;
+            OrderPrice = quantity * bread.Price;
             Bread = bread;
         }
     }

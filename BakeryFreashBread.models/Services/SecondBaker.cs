@@ -11,34 +11,19 @@ namespace BakeryFreashBread.models.Services
             Order = new Order();
         }
 
-        public void CreateBaguetteOrder()
-        {
-            IBreadOrder breadOrder = new BreadOrder(1, new Baguette());
-            Order.BreadOrders.Add(breadOrder);
-        }
-        public void CreateBaguetteOrder(int quantity)
+        public void CreateBaguetteOrder(int quantity = 1)
         {
             IBreadOrder breadOrder = new BreadOrder(quantity, new Baguette());
             Order.BreadOrders.Add(breadOrder);
         }
 
-        public void CreateWhiteBreadOrder()
-        {
-            IBreadOrder breadOrder = new BreadOrder(1, new WhiteBread());
-            Order.BreadOrders.Add(breadOrder);
-        }
-        public void CreateWhiteBreadOrder(int quantity)
+        public void CreateWhiteBreadOrder(int quantity = 1)
         {
             IBreadOrder breadOrder = new BreadOrder(quantity, new WhiteBread());
             Order.BreadOrders.Add(breadOrder);
         }
 
-        public void CreateHamburguerBunOrder()
-        {
-            IBreadOrder breadOrder = new BreadOrder(1, new HamburguerBun());
-            Order.BreadOrders.Add(breadOrder);
-        }
-        public void CreateHamburguerBunOrder(int quantity)
+        public void CreateHamburguerBunOrder(int quantity = 1)
         {
             IBreadOrder breadOrder = new BreadOrder(quantity, new HamburguerBun());
             Order.BreadOrders.Add(breadOrder);
@@ -50,6 +35,21 @@ namespace BakeryFreashBread.models.Services
         public double GetOrderPrice()
         {
             return Order.CalculateTotalPrice();
+        }
+
+        public void PrepareAllOrders()
+        {
+            if (Order.BreadOrders.Count == 0)
+            {
+                Console.WriteLine("There are no orders to dispatch");
+                return;
+            }
+            foreach (var breadOrder in Order.BreadOrders)
+            {
+                breadOrder.Bread.Prepare(breadOrder.Quantity);
+            }
+
+            Console.WriteLine($"Total cost: {GetOrderPrice()}");
         }
     }
 }

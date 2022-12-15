@@ -24,7 +24,7 @@ namespace BakeryFreashBread.models.Models
         public double CookingTemperature { get; set; }
         public HamburguerBun()
         {
-            Price = 10;
+            Price = 1.0;
             Flour = 100;
             Water = 25;
             Salt = 2;
@@ -39,6 +39,39 @@ namespace BakeryFreashBread.models.Models
             RestingTime = 0.5;
             FermentTime = 4;
             CookingTemperature = 180;
+        }
+
+        public void Prepare(int quantity = 1)
+        {
+            Console.WriteLine($"Mixing the {Flour * quantity} grs of flour, " +
+                             $"{Water * quantity} gr of water, " +
+                             $"{Yeast * quantity} gr of yeast, " +
+                             $"{Salt * quantity} gr of salt, " +
+                             $"{Sugar * quantity} gr of sugar, " +
+                             $"{Egg * quantity} gr of egg, " +
+                             $"{Butter * quantity} gr of butter, " +
+                             $"{Milk * quantity} gr of milk and " +
+                             $"{SweetPotato * quantity} gr of honey,");
+            Thread.Sleep(500);
+            if (quantity > 1)
+            {
+                Console.WriteLine("Cut the dough");
+                Thread.Sleep(500);
+            }
+
+            Console.WriteLine($"Let the dough rest {RestingTime} hrs");
+            Thread.Sleep(500);
+            Console.WriteLine("Shape the dough");
+            Thread.Sleep(500);
+            Console.WriteLine($"Let the dough rest {FermentTime} hrs");
+            Thread.Sleep(500);
+            Console.WriteLine($"Place on top of the dough the {SesameSeed * quantity} gr of seamed seen" +
+                $" and the {Gilding * quantity} gr the gilding");
+            Thread.Sleep(500);
+            Console.WriteLine($"Cook for {CookingTime} minutes at {CookingTemperature}º");
+            Thread.Sleep(500);
+            Console.WriteLine("Bread order prepared");
+            Thread.Sleep(1000);
         }
     }
 }

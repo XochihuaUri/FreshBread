@@ -1,6 +1,4 @@
-﻿using BakeryFreashBread.models.Services;
-using BakeryFreshBread.Api.Adapaters;
-using BakeryFreshBread.Api.Models;
+﻿using BakeryFreshBread.Api.Models;
 using DB;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;

@@ -22,5 +22,10 @@ namespace BakeryFreashBread.models.Models
         {
 
         }
+
+        void IBread.Prepare(int quantity)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

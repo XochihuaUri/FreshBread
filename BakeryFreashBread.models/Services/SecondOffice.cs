@@ -4,7 +4,8 @@ namespace BakeryFreashBread.models.Services
 {
     public class SecondOffice
     {
-        SecondBaker Baker { get; set; }
+        public SecondBaker Baker { get; set; }
+        public string OfficeId { get; set; } = Guid.NewGuid().ToString();
         public SecondOffice()
         {
             Baker = new SecondBaker();

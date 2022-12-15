@@ -7,5 +7,6 @@ namespace BakeryFreashBread.models.Interfaces
         Order Order { get; }
         public void ClearTheOrder();
         public double GetOrderPrice();
+        public void PrepareAllOrders();
     }
 }

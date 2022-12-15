@@ -15,7 +15,7 @@ namespace BakeryFreashBread.models.Models
         public double CookingTemperature { get; set; }
         public Baguette()
         {
-            Price = 8;
+            Price = 2.0;
             Flour = 280;
             Water = 210;
             Salt = 10;
@@ -24,6 +24,38 @@ namespace BakeryFreashBread.models.Models
             RestingTime = 0.5;
             FermentTime = 24;
             CookingTemperature = 270;
+        }
+
+        public void Prepare(int quantity = 1)
+        {
+            Console.WriteLine($"Mixing the {Flour * quantity} grs of flour, " +
+                             $"{Water * quantity} gr of water, " +
+                             $"{Yeast * quantity} gr of yeast and " +
+                             $"{Salt * quantity} gr of salt");
+            Thread.Sleep(500);
+            Console.WriteLine($"Leet the dough rest {RestingTime} hrs");
+            Thread.Sleep(500);
+            Console.WriteLine("Fold the dough");
+            Thread.Sleep(500);
+            Console.WriteLine($"Let the dough rest {RestingTime} hrs");
+            Thread.Sleep(500);
+            Console.WriteLine("Fold the dough");
+            Thread.Sleep(500);
+            Console.WriteLine($"Let the dough ferment {FermentTime} hrs");
+            Thread.Sleep(500);
+            if (quantity > 1)
+            {
+                Console.WriteLine("Cut the dough");
+                Thread.Sleep(500);
+            }
+            Console.WriteLine("Shape the dough");
+            Thread.Sleep(500);
+            Console.WriteLine($"Let the dough rest {RestingTime} hrs");
+            Thread.Sleep(500);
+            Console.WriteLine($"Cook for {CookingTime} minutes at {CookingTemperature}º");
+            Thread.Sleep(500);
+            Console.WriteLine("Bread order prepared");
+            Thread.Sleep(1000);
         }
     }
 }
