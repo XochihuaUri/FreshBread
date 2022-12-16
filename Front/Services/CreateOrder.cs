@@ -1,4 +1,6 @@
 ﻿using BakeryFreashBread.models.Interfaces;
+using Newtonsoft.Json.Linq;
+
 namespace Front.Services
 {
     internal static class CreateOrder
@@ -25,6 +27,16 @@ namespace Front.Services
                 throw new Exception("Invalid quantity");
             }
             int quantity = Int32.Parse(quantityInput);
+            
+            
+            if(office.BreadsRemaining - quantity <= 0)
+            {
+                throw new Exception("The office can not cook more breads");
+            }
+            else
+            {
+                office.BreadsRemaining -= quantity;
+            }
 
             switch (breadSelected)
             {
@@ -40,6 +52,8 @@ namespace Front.Services
                 default:
                     break;
             }
+
+            Console.WriteLine($"{office.BreadsRemaining} breads reamining in{Enum.GetName(typeof(OfficeType), office.OfficeType)}");
         }
     }
 }

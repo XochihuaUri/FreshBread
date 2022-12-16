@@ -58,11 +58,11 @@ namespace BakeryFreashBread.models.Services
             {
                 breadOrder.Bread.Prepare(breadOrder.Quantity);
                 BreadOrderResponse breadOrderResponse = await BreadOrderActions.CreateBreadOrder(order.OrderId, breadOrder);
-                Console.WriteLine($"Bread: {breadOrder.Bread.ToString} created");
+                Console.WriteLine($"Bread: {Enum.GetName(typeof(BreadType), breadOrder.BreadType)} created");
 
             }
 
-            Console.WriteLine($"Total cost: {CalculateTotalPrice()}");
+            Console.WriteLine($"Total cost of the order: {CalculateTotalPrice()}");
             BreadOrders.Clear();
         }
 

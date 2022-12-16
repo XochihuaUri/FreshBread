@@ -11,6 +11,7 @@ namespace BakeryFreashBread.models.Interfaces
         public IBaker Baker { get; set; }
         public string OfficeId { get; set; }
         public OfficeType OfficeType { get; set; }
+        public int BreadsRemaining { get; set; }
 
     }
 
