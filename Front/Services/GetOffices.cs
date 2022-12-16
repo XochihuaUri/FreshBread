@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace Front.Services
 {
-    public static class ConnectionToDB
+    public static class GetOffices
     {
         
         public static async Task<MainOffice> GetMainOfficeAsync()

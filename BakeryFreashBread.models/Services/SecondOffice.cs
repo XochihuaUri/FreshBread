@@ -1,14 +1,16 @@
-﻿
+﻿using BakeryFreashBread.models.Interfaces;
 
 namespace BakeryFreashBread.models.Services
 {
-    public class SecondOffice
+    public class SecondOffice : IOffice
     {
-        public SecondBaker Baker { get; set; }
+        public IBaker Baker { get; set; }
         public string OfficeId { get; set; } = Guid.NewGuid().ToString();
-        public SecondOffice()
-        {
-            Baker = new SecondBaker();
-        }
+        public OfficeType OfficeType { get; set; }
+        //public SecondOffice()
+        //{
+        //    //Baker = new SecondBaker();
+        //    OfficeType = OfficeType.SecondOffice;
+        //}
     }
 }

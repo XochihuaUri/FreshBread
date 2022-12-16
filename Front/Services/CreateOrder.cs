@@ -1,17 +1,22 @@
-﻿using BakeryFreashBread.models.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using BakeryFreashBread.models.Interfaces;
 namespace Front.Services
 {
     internal static class CreateOrder
     {
-        public static void CreateMainOrder(MainOffice mainOffice)
+
+        public static void CreateNewOrder(IOffice office)
         {
-            Print.DisplayMainBreads();
+            switch (office.OfficeType)
+            {
+                case OfficeType.MainOffice:
+                    Print.DisplayMainBreads();
+                    break;
+                case OfficeType.SecondOffice:
+                    Print.DisplaySecondBreads();
+                    break ;
+
+            }
+            
             var breadSelected = Console.ReadLine();
             Console.WriteLine("Insert the quantity of breads");
             var quantityInput = Console.ReadLine();
@@ -24,41 +29,13 @@ namespace Front.Services
             switch (breadSelected)
             {
                 case "1":
-                    mainOffice.Baker.CreateBaguetteOrder(quantity);
+                    office.Baker.CreateBaguetteOrder(quantity);
                     break;
                 case "2":
-                    mainOffice.Baker.CreateWhiteBreadOrder(quantity);
+                    office.Baker.CreateWhiteBreadOrder(quantity);
                     break;
                 case "3":
-                    mainOffice.Baker.CreateMilkBreadOrder(quantity);
-                    break;
-                default:
-                    break;
-            }
-        }
-
-
-        public static void CreateSecondOrder(SecondOffice secondOffice)
-        {
-            Print.DisplaySecondBreads();
-            var breadSelected = Console.ReadLine();
-            Console.WriteLine("Insert the quantity of breads");
-            var quantityInput = Console.ReadLine();
-            if (quantityInput == null)
-            {
-                throw new Exception("Invalid quantity");
-            }
-            int quantity = Int32.Parse(quantityInput);
-            switch (breadSelected)
-            {
-                case "1":
-                    secondOffice.Baker.CreateBaguetteOrder(quantity);
-                    break;
-                case "2":
-                    secondOffice.Baker.CreateWhiteBreadOrder(quantity);
-                    break;
-                case "3":
-                    secondOffice.Baker.CreateHamburguerBunOrder(quantity);
+                    office.Baker.CreateEspecialityOfTheOffice(quantity);
                     break;
                 default:
                     break;

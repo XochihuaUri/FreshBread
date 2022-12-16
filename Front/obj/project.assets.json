@@ -14,16 +14,6 @@
             "related": ".xml"
           }
         }
-      },
-      "BakeryFreashBread.models/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/BakeryFreashBread.models.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BakeryFreashBread.models.dll": {}
-        }
       }
     }
   },
@@ -57,16 +47,10 @@
         "newtonsoft.json.nuspec",
         "packageIcon.png"
       ]
-    },
-    "BakeryFreashBread.models/1.0.0": {
-      "type": "project",
-      "path": "../BakeryFreashBread.models/BakeryFreashBread.models.csproj",
-      "msbuildProject": "../BakeryFreashBread.models/BakeryFreashBread.models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "BakeryFreashBread.models >= 1.0.0",
       "Newtonsoft.Json >= 13.0.2"
     ]
   },
@@ -96,11 +80,7 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {
-            "D:\\jala\\Back\\BakeryFreshBread.Api\\BakeryFreashBread.models\\BakeryFreashBread.models.csproj": {
-              "projectPath": "D:\\jala\\Back\\BakeryFreshBread.Api\\BakeryFreashBread.models\\BakeryFreashBread.models.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

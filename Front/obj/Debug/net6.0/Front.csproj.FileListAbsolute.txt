@@ -13,7 +13,5 @@ D:\jala\Back\BakeryFreshBread.Api\Front\obj\Debug\net6.0\refint\Front.dll
 D:\jala\Back\BakeryFreshBread.Api\Front\obj\Debug\net6.0\Front.pdb
 D:\jala\Back\BakeryFreshBread.Api\Front\obj\Debug\net6.0\Front.genruntimeconfig.cache
 D:\jala\Back\BakeryFreshBread.Api\Front\obj\Debug\net6.0\ref\Front.dll
-D:\jala\Back\BakeryFreshBread.Api\Front\bin\Debug\net6.0\BakeryFreashBread.models.dll
-D:\jala\Back\BakeryFreshBread.Api\Front\bin\Debug\net6.0\BakeryFreashBread.models.pdb
 D:\jala\Back\BakeryFreshBread.Api\Front\obj\Debug\net6.0\Front.csproj.CopyComplete
 D:\jala\Back\BakeryFreshBread.Api\Front\bin\Debug\net6.0\Newtonsoft.Json.dll

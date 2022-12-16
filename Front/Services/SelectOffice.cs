@@ -1,49 +1,26 @@
-﻿using BakeryFreashBread.models.Services;
+﻿using BakeryFreashBread.models.Interfaces;
 
 namespace Front.Services
 {
     internal static class SelectOffice
     {
-        public static void SelectMainOffice(MainOffice mainOffice)
+        public static async Task SelectNewOfficeAsync(IOffice office)
         {
-            bool office = true;
-            while (office)
+            bool bucle = true;
+            while (bucle)
             {
                 Print.DisplayOfficeMenu();
                 var actionSelected = Console.ReadLine();
                 switch (actionSelected)
                 {
                     case "1":
-                        CreateOrder.CreateMainOrder(mainOffice);
+                        CreateOrder.CreateNewOrder(office);
                         break;
                     case "2":
-                        mainOffice.Baker.PrepareAllOrders();
+                        await office.Baker.PrepareAllOrdersAsync(office.OfficeId);
                         break;
                     case "3":
-                        office = false;
-                        break;
-                    default:
-                        break;
-                }
-            }
-        }
-        public static void SelectSecondOffice(SecondOffice secondOffice)
-        {
-            bool office = true;
-            while (office)
-            {
-                Print.DisplayOfficeMenu();
-                var actionSelected = Console.ReadLine();
-                switch (actionSelected)
-                {
-                    case "1":
-                        CreateOrder.CreateSecondOrder(secondOffice);
-                        break;
-                    case "2":
-                        secondOffice.Baker.PrepareAllOrders();
-                        break;
-                    case "3":
-                        office = false;
+                        bucle = false;
                         break;
                     default:
                         break;

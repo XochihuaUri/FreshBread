@@ -1,17 +1,17 @@
-﻿
-
-using BakeryFreashBread.models.Interfaces;
+﻿using BakeryFreashBread.models.Interfaces;
 
 namespace BakeryFreashBread.models.Services
 {
-    public class MainOffice
+    public class MainOffice : IOffice
     {
-        public MainBaker Baker { get; set; }
+        public IBaker Baker { get; set; }
         public string OfficeId { get; set; } = Guid.NewGuid().ToString();
-        public MainOffice()
-        {
-            Baker = new MainBaker();
-        }
+        public OfficeType OfficeType { get; set; }
+        //public MainOffice()
+        //{
+        //    Baker = new MainBaker();
+        //    OfficeType = OfficeType.MainOffice;
+        //}
         
     }
 }

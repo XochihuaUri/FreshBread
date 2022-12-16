@@ -1,4 +1,5 @@
-﻿using BakeryFreashBread.models.Services;
+﻿
+using BakeryFreashBread.models.Interfaces;
 using Front.Services;
 
 namespace Front
@@ -7,8 +8,8 @@ namespace Front
     {
         static async Task Main(string[] args)
         {
-            MainOffice mainOffice = await ConnectionToDB.GetMainOfficeAsync();
-            SecondOffice secondOffice = await ConnectionToDB.GetSecondOfficeAsync();
+            IOffice mainOffice = await GetOffices.GetMainOfficeAsync();
+            IOffice secondOffice = await GetOffices.GetSecondOfficeAsync();
             while (true)
             {
                 Console.WriteLine("Insert the office's number you want to choose: \n" +
@@ -18,10 +19,10 @@ namespace Front
                 switch (officeSelected)
                 {
                     case "1":
-                        SelectOffice.SelectMainOffice(mainOffice);
+                        await SelectOffice.SelectNewOfficeAsync(mainOffice);
                         break;
                     case "2":
-                        SelectOffice.SelectSecondOffice(secondOffice);
+                        await SelectOffice.SelectNewOfficeAsync(secondOffice);
                         break;
                     default:
                         break;

@@ -54,7 +54,8 @@ namespace BakeryFreshBread.Api.Controllers
         public async Task<ActionResult<Order>> PostOrder(OrderRequestPost orderRequest)
         {
             var office = await _context.Offices.FindAsync(orderRequest.OfficeId);
-            if(office == null)
+            var breadOrders = await _context.BreadOrders.ToListAsync();
+            if (office == null)
             {
                 throw new Exception("Office not found");
             }

@@ -18,9 +18,9 @@ namespace DB
 
     public enum BreadType
     {
-        Bagguete,
-        WhiteBread,
-        MilkBread,
-        HamburguerBun
+        Bagguete = 1,
+        WhiteBrea = 2,
+        MilkBread = 3,
+        HamburguerBun = 4,
     }
 }
